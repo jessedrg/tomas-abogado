@@ -60,9 +60,9 @@ export function HomeHero({ locale }: HomeHeroProps) {
         {/* Stats row */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-20 pt-10 border-t border-border/30">
           {[
-            { value: "500+", label: t.stats.cases },
-            { value: "20+", label: t.stats.experience },
-            { value: "85%", label: t.stats.success },
+            { value: "+50", label: t.stats.cases },
+            { value: "24h", label: t.stats.experience },
+            { value: "✓", label: t.stats.success },
             { value: t.stats.availableValue, label: t.stats.available },
           ].map(({ value, label }) => (
             <div key={label}>

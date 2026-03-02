@@ -10,7 +10,7 @@ const serviceImages = {
   trafficking: "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?q=80&w=2070&auto=format&fit=crop",
   possession: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop",
   conspiracy: "https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=2069&auto=format&fit=crop",
-  moneylaundering: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2011&auto=format&fit=crop",
+  moneylaundering: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop",
   international: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=2033&auto=format&fit=crop",
   appeals: "https://images.unsplash.com/photo-1479142506502-19b3a3b7ff33?q=80&w=2070&auto=format&fit=crop",
 }
@@ -19,7 +19,7 @@ const serviceIds = {
   trafficking: "abogado-narcotrafico",
   possession: "abogado-posesion-drogas",
   conspiracy: "defensa-trafico-drogas",
-  moneylaundering: "defensa-blanqueo-capitales",
+  moneylaundering: "abogado-malos-tratos",
   international: "abogado-extradicion",
   appeals: "recurso-sentencia-drogas",
 }

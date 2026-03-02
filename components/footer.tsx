@@ -16,7 +16,7 @@ export function Footer({ locale }: FooterProps) {
   const services = [
     { name: locale === "ar" ? "الاتجار بالمخدرات" : locale === "fr" ? "Trafic de drogue" : locale === "en" ? "Drug Trafficking" : "Narcotráfico", href: `/${locale}/${getLocalizedSlug("abogado-narcotrafico", locale)}/` },
     { name: locale === "ar" ? "حيازة المخدرات" : locale === "fr" ? "Possession de drogue" : locale === "en" ? "Drug Possession" : "Posesión Drogas", href: `/${locale}/${getLocalizedSlug("abogado-posesion-drogas", locale)}/` },
-    { name: locale === "ar" ? "غسيل الأموال" : locale === "fr" ? "Blanchiment" : locale === "en" ? "Money Laundering" : "Blanqueo Capitales", href: `/${locale}/${getLocalizedSlug("defensa-blanqueo-capitales", locale)}/` },
+    { name: locale === "ar" ? "سوء المعاملة" : locale === "fr" ? "Mauvais traitements" : locale === "en" ? "Domestic Violence" : "Malos Tratos", href: `/${locale}/abogado-malos-tratos/` },
     { name: locale === "ar" ? "التسليم" : locale === "fr" ? "Extradition" : locale === "en" ? "Extradition" : "Extradición", href: `/${locale}/${getLocalizedSlug("abogado-extradicion", locale)}/` },
     { name: locale === "ar" ? "الاستئناف" : locale === "fr" ? "Appels" : locale === "en" ? "Appeals" : "Recursos", href: `/${locale}/${getLocalizedSlug("recurso-sentencia-drogas", locale)}/` },
   ]

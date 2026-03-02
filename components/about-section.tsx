@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Award, Scale, GraduationCap, MapPin } from "lucide-react"
+import { Globe, Languages, MapPin, ShieldCheck } from "lucide-react"
 import { type Locale, getTranslations, isRTL } from "@/lib/i18n"
 
 interface AboutSectionProps {
@@ -8,63 +8,63 @@ interface AboutSectionProps {
 
 const aboutContent = {
   es: {
-    label: "Sobre el Despacho",
+    label: "Sobre Tomás",
     title: "Más de 50 Años de Experiencia en Defensa Penal",
     bio: [
-      "Tomás Gilabert cuenta con una trayectoria de más de medio siglo en la defensa penal, especializado en casos de narcotráfico y delitos contra la salud pública en toda España.",
-      "Tomás ha sido reconocido con la Distinción Honorífica por Ejercicio Ejemplar de la Abogacía, otorgada por el Ilustre Colegio de Abogados, en reconocimiento a una carrera ejemplar de más de 50 años de ejercicio profesional.",
-      "Ha defendido casos de alta complejidad con repercusión mediática nacional, incluyendo operaciones internacionales de tráfico de drogas, casos de blanqueo de capitales y extradiciones entre España, Marruecos y otros países.",
+      "Tomás es licenciado en Derecho por la Universitat de Barcelona y cuenta con una trayectoria de más de medio siglo en la defensa penal, especializado en casos de narcotráfico y delitos contra la salud pública en toda España.",
+      "Además de su carrera jurídica, Tomás ha tenido una destacada trayectoria política, habiendo sido diplomático en la Generalitat de Catalunya.",
+      "Ha defendido varios casos de éxito en narcotráfico muy mediáticos en España, incluyendo operaciones internacionales de tráfico de drogas y extradiciones entre España, Marruecos y otros países.",
     ],
     credentials: [
-      { icon: Award, text: "Distinción Honorífica por Ejercicio Ejemplar" },
-      { icon: Scale, text: "Especialización en Derecho Penal" },
-      { icon: GraduationCap, text: "+50 Años de Experiencia" },
-      { icon: MapPin, text: "Actuación en toda España" },
+      { icon: Globe, text: "Diplomático en la Generalitat de Catalunya" },
+      { icon: Languages, text: "Atendemos en Castellano, Inglés, Francés y Ruso" },
+      { icon: MapPin, text: "Defensa en toda España" },
+      { icon: ShieldCheck, text: "Confidencialidad Absoluta" },
     ],
   },
   en: {
-    label: "About the Firm",
+    label: "About Tomás",
     title: "Over 50 Years of Experience in Criminal Defense",
     bio: [
-      "Tomás Gilabert has a track record of over half a century in criminal defense, specialized in drug trafficking and public health crime cases throughout Spain.",
-      "Tomás has been recognized with the Honorary Distinction for Exemplary Practice of Law, awarded by the Bar Association, in recognition of an exemplary career of over 50 years of professional practice.",
-      "He has defended highly complex cases with national media coverage, including international drug trafficking operations, money laundering cases and extraditions between Spain, Morocco and other countries.",
+      "Tomás holds a Law degree from the University of Barcelona and has a track record of over half a century in criminal defense, specialized in drug trafficking and public health crime cases throughout Spain.",
+      "In addition to his legal career, Tomás has had a distinguished political career, having served as a diplomat in the Generalitat de Catalunya.",
+      "He has defended several high-profile successful drug trafficking cases in Spain, including international drug trafficking operations and extraditions between Spain, Morocco and other countries.",
     ],
     credentials: [
-      { icon: Award, text: "Honorary Distinction for Exemplary Practice" },
-      { icon: Scale, text: "Criminal Law Specialization" },
-      { icon: GraduationCap, text: "+50 Years of Experience" },
-      { icon: MapPin, text: "Operating throughout Spain" },
+      { icon: Globe, text: "Diplomat at the Generalitat de Catalunya" },
+      { icon: Languages, text: "We serve in Spanish, English, French and Russian" },
+      { icon: MapPin, text: "Defense throughout Spain" },
+      { icon: ShieldCheck, text: "Absolute Confidentiality" },
     ],
   },
   fr: {
-    label: "À Propos du Cabinet",
+    label: "À Propos de Tomás",
     title: "Plus de 50 Ans d'Expérience en Défense Pénale",
     bio: [
-      "Tomás Gilabert possède une trajectoire de plus d'un demi-siècle en défense pénale, spécialisé dans les affaires de trafic de drogue et crimes contre la santé publique dans toute l'Espagne.",
-      "Tomás a été reconnu avec la Distinction Honorifique pour Exercice Exemplaire du Droit, décernée par le Barreau, en reconnaissance d'une carrière exemplaire de plus de 50 ans de pratique professionnelle.",
-      "Il a défendu des affaires très complexes avec une couverture médiatique nationale, y compris des opérations internationales de trafic de drogue, des affaires de blanchiment d'argent et des extraditions entre l'Espagne, le Maroc et d'autres pays.",
+      "Tomás est diplômé en Droit de l'Université de Barcelone et possède une trajectoire de plus d'un demi-siècle en défense pénale, spécialisé dans les affaires de trafic de drogue et crimes contre la santé publique dans toute l'Espagne.",
+      "En plus de sa carrière juridique, Tomás a eu une carrière politique distinguée, ayant été diplomate à la Generalitat de Catalunya.",
+      "Il a défendu plusieurs affaires de trafic de drogue très médiatisées avec succès en Espagne, y compris des opérations internationales et des extraditions entre l'Espagne, le Maroc et d'autres pays.",
     ],
     credentials: [
-      { icon: Award, text: "Distinction Honorifique pour Exercice Exemplaire" },
-      { icon: Scale, text: "Spécialisation en Droit Pénal" },
-      { icon: GraduationCap, text: "+50 Ans d'Expérience" },
-      { icon: MapPin, text: "Intervention dans toute l'Espagne" },
+      { icon: Globe, text: "Diplomate à la Generalitat de Catalunya" },
+      { icon: Languages, text: "Nous servons en Espagnol, Anglais, Français et Russe" },
+      { icon: MapPin, text: "Défense dans toute l'Espagne" },
+      { icon: ShieldCheck, text: "Confidentialité Absolue" },
     ],
   },
   ar: {
-    label: "عن المكتب",
+    label: "عن توماس",
     title: "أكثر من 50 عامًا من الخبرة في الدفاع الجنائي",
     bio: [
-      "يتمتع توماس جيلابيرت بسجل حافل يمتد لأكثر من نصف قرن في الدفاع الجنائي، متخصص في قضايا تهريب المخدرات والجرائم ضد الصحة العامة في جميع أنحاء إسبانيا.",
-      "تم تكريم توماس بوسام الشرف للممارسة المثالية للمحاماة، الممنوح من نقابة المحامين، تقديرًا لمسيرة مهنية مثالية تمتد لأكثر من 50 عامًا.",
-      "دافع عن قضايا معقدة للغاية ذات تغطية إعلامية وطنية، بما في ذلك عمليات تهريب المخدرات الدولية وقضايا غسيل الأموال والتسليم بين إسبانيا والمغرب ودول أخرى.",
+      "توماس حاصل على شهادة في القانون من جامعة برشلونة ويتمتع بسجل حافل يمتد لأكثر من نصف قرن في الدفاع الجنائي، متخصص في قضايا تهريب المخدرات والجرائم ضد الصحة العامة في جميع أنحاء إسبانيا.",
+      "بالإضافة إلى مسيرته القانونية، كان لتوماس مسيرة سياسية متميزة، حيث عمل دبلوماسيًا في حكومة كاتالونيا.",
+      "دافع عن عدة قضايا ناجحة في تهريب المخدرات ذات تغطية إعلامية كبيرة في إسبانيا، بما في ذلك عمليات دولية والتسليم بين إسبانيا والمغرب ودول أخرى.",
     ],
     credentials: [
-      { icon: Award, text: "وسام شرفي للممارسة المثالية" },
-      { icon: Scale, text: "تخصص في القانون الجنائي" },
-      { icon: GraduationCap, text: "+50 عامًا من الخبرة" },
-      { icon: MapPin, text: "نعمل في جميع أنحاء إسبانيا" },
+      { icon: Globe, text: "دبلوماسي في حكومة كاتالونيا" },
+      { icon: Languages, text: "نخدم بالإسبانية والإنجليزية والفرنسية والروسية" },
+      { icon: MapPin, text: "الدفاع في جميع أنحاء إسبانيا" },
+      { icon: ShieldCheck, text: "سرية مطلقة" },
     ],
   },
 }
