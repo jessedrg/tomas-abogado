@@ -2,10 +2,11 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Phone, Menu, X, Globe } from "lucide-react"
+import Image from "next/image"
+import { Menu, X, Globe } from "lucide-react"
 import { type Locale, localeNames, localeFlags, getTranslations, isRTL } from "@/lib/i18n"
 
-const PHONE_URL = "tel:+34641021551"
+const WHATSAPP_URL = "https://wa.me/34641021551?text=Hola%2C%20necesito%20consulta%20urgente"
 
 interface NavbarProps {
   locale: Locale
@@ -61,10 +62,12 @@ export function Navbar({ locale }: NavbarProps) {
           </div>
 
           <a
-            href={PHONE_URL}
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 bg-primary text-primary-foreground text-[13px] px-5 py-2.5 hover:opacity-90 transition-opacity"
           >
-            <Phone className="w-3.5 h-3.5" />
+            <Image src="/signal.jpeg" alt="Signal" width={14} height={14} className="w-3.5 h-3.5" />
             {t.nav.freeConsultation}
           </a>
         </div>
@@ -92,7 +95,8 @@ export function Navbar({ locale }: NavbarProps) {
               </Link>
             ))}
           </div>
-          <a href={PHONE_URL} className="block text-center bg-primary text-primary-foreground text-sm px-6 py-3">
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-primary text-primary-foreground text-sm px-6 py-3">
+            <Image src="/signal.jpeg" alt="Signal" width={14} height={14} className="w-3.5 h-3.5" />
             {t.nav.freeConsultation}
           </a>
         </div>

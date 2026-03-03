@@ -8,8 +8,7 @@ import { VALID_SERVICES, CITIES, SERVICE_NAMES_I18N, SERVICE_SLUGS_I18N, getCano
 import { Phone, Shield, Clock, Scale, Users, Star, CheckCircle, ChevronDown, ArrowRight, Award, Newspaper, ExternalLink } from "lucide-react"
 import Image from "next/image"
 
-const PHONE_URL = "tel:+34641021551"
-const SIGNAL_URL = "https://signal.me/#p/+34641021551"
+const WHATSAPP_URL = "https://wa.me/34641021551?text=Hola%2C%20necesito%20consulta%20urgente"
 
 interface PageProps {
   params: Promise<{ locale: string; service: string; city: string }>
@@ -123,20 +122,13 @@ export default async function ServiceCityPage({ params }: PageProps) {
               <div className="lg:col-span-5 lg:col-start-8">
                 <div className="flex flex-col gap-3">
                   <a
-                    href={PHONE_URL}
-                    className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 text-sm font-sans font-medium hover:opacity-90 transition-opacity"
-                  >
-                    <Phone className="w-4 h-4" />
-                    {t.cityPage.freeQuote}
-                  </a>
-                  <a
-                    href={SIGNAL_URL}
+                    href={WHATSAPP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 border border-border text-foreground px-8 py-4 text-sm font-sans hover:border-primary/50 transition-colors"
+                    className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 text-sm font-sans font-medium hover:opacity-90 transition-opacity"
                   >
-                    <Image src="/signal.jpeg" alt="Signal" width={16} height={16} className="w-4 h-4" />
-                    {t.cta.signal}
+                    <Image src="/signal.jpeg" alt="WhatsApp" width={16} height={16} className="w-4 h-4" />
+                    {t.cta.button}
                   </a>
                 </div>
 
@@ -304,8 +296,8 @@ export default async function ServiceCityPage({ params }: PageProps) {
             <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl tracking-tight text-primary-foreground leading-[1.05]">
               {t.cta.title}
             </h2>
-            <a href={PHONE_URL} className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 mt-10 text-sm font-sans font-medium hover:opacity-90 transition-opacity">
-              <Phone className="w-4 h-4" /> {t.cta.button}
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 mt-10 text-sm font-sans font-medium hover:opacity-90 transition-opacity">
+              <Image src="/signal.jpeg" alt="WhatsApp" width={16} height={16} className="w-4 h-4" /> {t.cta.button}
             </a>
           </div>
         </section>
@@ -405,8 +397,8 @@ export default async function ServiceCityPage({ params }: PageProps) {
             </p>
             <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl tracking-tight text-primary-foreground">{t.cta.title}</h2>
             <div className={`flex flex-col sm:flex-row gap-3 justify-center mt-10 ${rtl ? "sm:flex-row-reverse" : ""}`}>
-              <a href={PHONE_URL} className="inline-flex items-center justify-center gap-2 bg-primary-foreground text-primary px-8 py-4 text-sm font-sans font-medium hover:opacity-90 transition-opacity">
-                <Phone className="w-4 h-4" /> {t.cta.button}
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary-foreground text-primary px-8 py-4 text-sm font-sans font-medium hover:opacity-90 transition-opacity">
+                <Image src="/signal.jpeg" alt="WhatsApp" width={16} height={16} className="w-4 h-4" /> {t.cta.button}
               </a>
               <Link href={`/${validLocale}/`} className="inline-flex items-center justify-center gap-2 border border-primary-foreground/30 text-primary-foreground px-8 py-4 text-sm font-sans hover:bg-primary-foreground/10 transition-colors">
                 {validLocale === "ar" ? "عرض الخدمات" : validLocale === "fr" ? "Voir les services" : validLocale === "en" ? "View services" : "Ver servicios"}

@@ -1,9 +1,10 @@
 import Link from "next/link"
-import { Phone, Mail, MapPin } from "lucide-react"
+import Image from "next/image"
+import { Mail, MapPin } from "lucide-react"
 import { type Locale, getTranslations, isRTL } from "@/lib/i18n"
 import { getLocalizedSlug } from "@/lib/sitemap-data"
 
-const PHONE_URL = "tel:+34641021551"
+const WHATSAPP_URL = "https://wa.me/34641021551?text=Hola%2C%20necesito%20consulta%20urgente"
 
 interface FooterProps {
   locale: Locale
@@ -63,8 +64,8 @@ export function Footer({ locale }: FooterProps) {
             <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground mb-4">{t.footer.contact}</p>
             <ul className="space-y-3">
               <li>
-                <a href={PHONE_URL} className={`flex items-center gap-2 text-xs text-foreground/70 hover:text-primary transition-colors ${rtl ? "flex-row-reverse" : ""}`}>
-                  <Phone className="w-3.5 h-3.5" /> +34 641 021 551
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className={`flex items-center gap-2 text-xs text-foreground/70 hover:text-primary transition-colors ${rtl ? "flex-row-reverse" : ""}`}>
+                  <Image src="/signal.jpeg" alt="WhatsApp" width={14} height={14} className="w-3.5 h-3.5" /> WhatsApp
                 </a>
               </li>
               <li>
