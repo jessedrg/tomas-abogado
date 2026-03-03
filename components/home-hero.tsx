@@ -1,7 +1,7 @@
 import { Phone, Scale, ArrowRight } from "lucide-react"
 import { type Locale, getTranslations, isRTL } from "@/lib/i18n"
 
-const PHONE_URL = "tel:+34600000000"
+const PHONE_URL = "tel:+34641021551"
 
 interface HomeHeroProps {
   locale: Locale

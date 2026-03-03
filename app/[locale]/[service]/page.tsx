@@ -9,7 +9,7 @@ import { VALID_SERVICES, CITIES, SERVICE_NAMES_I18N, SERVICE_SLUGS_I18N, getCano
 import { Phone, Shield, Clock, Scale, Users, ArrowRight, Award, Newspaper, ExternalLink } from "lucide-react"
 import Image from "next/image"
 
-const PHONE_URL = "tel:+34600000000"
+const PHONE_URL = "tel:+34641021551"
 
 interface PageProps {
   params: Promise<{ locale: string; service: string }>

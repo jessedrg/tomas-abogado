@@ -109,7 +109,7 @@ export const translations = {
       title: "¿Detenido? Llame Ahora",
       subtitle: "Abogado penalista urgente. Acudimos a comisaría en menos de 2 horas.",
       button: "Llamar Urgente 24h",
-      whatsapp: "WhatsApp Directo",
+      signal: "Signal Directo",
     },
     faq: {
       label: "Preguntas Frecuentes",
@@ -218,7 +218,7 @@ export const translations = {
       title: "Your Freedom Is My Priority",
       subtitle: "Every minute counts. Contact now for a confidential evaluation of your case.",
       button: "Call Now",
-      whatsapp: "WhatsApp 24h",
+      signal: "Signal 24h",
     },
     faq: {
       label: "FAQ",
@@ -327,7 +327,7 @@ export const translations = {
       title: "Votre Liberté Est Ma Priorité",
       subtitle: "Chaque minute compte. Contactez maintenant pour une évaluation confidentielle de votre affaire.",
       button: "Appeler Maintenant",
-      whatsapp: "WhatsApp 24h",
+      signal: "Signal 24h",
     },
     faq: {
       label: "FAQ",
@@ -436,7 +436,7 @@ export const translations = {
       title: "حريتك هي أولويتي",
       subtitle: "كل دقيقة مهمة. اتصل الآن للحصول على تقييم سري لقضيتك.",
       button: "اتصل الآن",
-      whatsapp: "واتساب 24 ساعة",
+      signal: "سيجنال 24 ساعة",
     },
     faq: {
       label: "الأسئلة الشائعة",

@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin } from "lucide-react"
 import { type Locale, getTranslations, isRTL } from "@/lib/i18n"
 import { getLocalizedSlug } from "@/lib/sitemap-data"
 
-const PHONE_URL = "tel:+34600000000"
+const PHONE_URL = "tel:+34641021551"
 
 interface FooterProps {
   locale: Locale
@@ -64,7 +64,7 @@ export function Footer({ locale }: FooterProps) {
             <ul className="space-y-3">
               <li>
                 <a href={PHONE_URL} className={`flex items-center gap-2 text-xs text-foreground/70 hover:text-primary transition-colors ${rtl ? "flex-row-reverse" : ""}`}>
-                  <Phone className="w-3.5 h-3.5" /> +34 600 000 000
+                  <Phone className="w-3.5 h-3.5" /> +34 641 021 551
                 </a>
               </li>
               <li>

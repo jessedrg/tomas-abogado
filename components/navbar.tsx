@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Phone, Menu, X, Globe } from "lucide-react"
 import { type Locale, localeNames, localeFlags, getTranslations, isRTL } from "@/lib/i18n"
 
-const PHONE_URL = "tel:+34600000000"
+const PHONE_URL = "tel:+34641021551"
 
 interface NavbarProps {
   locale: Locale
