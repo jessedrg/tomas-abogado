@@ -65,7 +65,7 @@ export function Footer({ locale }: FooterProps) {
             <ul className="space-y-3">
               <li>
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className={`flex items-center gap-2 text-xs text-foreground/70 hover:text-primary transition-colors ${rtl ? "flex-row-reverse" : ""}`}>
-                  <Image src="/signal.jpeg" alt="WhatsApp" width={14} height={14} className="w-3.5 h-3.5" /> WhatsApp
+                  <Image src="/whatsapp.svg" alt="WhatsApp" width={14} height={14} className="w-3.5 h-3.5" /> WhatsApp
                 </a>
               </li>
               <li>

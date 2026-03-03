@@ -67,7 +67,7 @@ export function Navbar({ locale }: NavbarProps) {
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-primary text-primary-foreground text-[13px] px-5 py-2.5 hover:opacity-90 transition-opacity"
           >
-            <Image src="/signal.jpeg" alt="Signal" width={14} height={14} className="w-3.5 h-3.5" />
+            <Image src="/whatsapp.svg" alt="WhatsApp" width={14} height={14} className="w-3.5 h-3.5" />
             {t.nav.freeConsultation}
           </a>
         </div>
@@ -96,7 +96,7 @@ export function Navbar({ locale }: NavbarProps) {
             ))}
           </div>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-primary text-primary-foreground text-sm px-6 py-3">
-            <Image src="/signal.jpeg" alt="Signal" width={14} height={14} className="w-3.5 h-3.5" />
+            <Image src="/whatsapp.svg" alt="WhatsApp" width={14} height={14} className="w-3.5 h-3.5" />
             {t.nav.freeConsultation}
           </a>
         </div>

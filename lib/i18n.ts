@@ -23,15 +23,15 @@ export const translations = {
       about: "Proceso",
       cases: "Casos",
       contact: "Contacto",
-      freeConsultation: "Llamar Urgente",
+      freeConsultation: "WhatsApp Urgente",
     },
     hero: {
       badge: "Uno de los abogados penalistas más reputados de España",
       title: "¿Acusado por Narcotráfico?",
       titleAccent: "Defensa Penal Urgente",
       subtitle: "Tomás, uno de los abogados penalistas con más prestigio en España. Más de 50 años de experiencia en defensa penal. Especialización en narcotráfico y todo tipo de delitos penales.",
-      cta: "Llamar Ahora - Urgente",
-      ctaSecondary: "Signal Directo",
+      cta: "Háblenos por Signal",
+      ctaSecondary: "Háblenos por WhatsApp",
     },
     stats: {
       cases: "Años de Trayectoria",
@@ -106,10 +106,10 @@ export const translations = {
       verified: "Verificado",
     },
     cta: {
-      title: "¿Detenido? Llame Ahora",
+      title: "¿Detenido? Contáctenos Ahora",
       subtitle: "Abogado penalista urgente. Acudimos a comisaría en menos de 2 horas.",
-      button: "Llamar Urgente 24h",
-      signal: "Signal Directo",
+      button: "Háblenos por Signal",
+      whatsapp: "Háblenos por WhatsApp",
     },
     faq: {
       label: "Preguntas Frecuentes",
@@ -144,15 +144,15 @@ export const translations = {
       about: "About",
       cases: "Cases",
       contact: "Contact",
-      freeConsultation: "Call Urgent",
+      freeConsultation: "WhatsApp Urgent",
     },
     hero: {
       badge: "One of the most reputable criminal lawyers in Spain",
       title: "Accused of Drug Trafficking?",
       titleAccent: "Urgent Criminal Defense",
       subtitle: "Tomás, one of the most prestigious criminal defense attorneys in Spain. Over 50 years of experience in criminal defense. Specialization in drug trafficking and all types of criminal offenses.",
-      cta: "Call Now - Urgent",
-      ctaSecondary: "Signal Direct",
+      cta: "Contact us via Signal",
+      ctaSecondary: "Contact us via WhatsApp",
     },
     stats: {
       cases: "Years of Experience",
@@ -217,8 +217,8 @@ export const translations = {
     cta: {
       title: "Your Freedom Is My Priority",
       subtitle: "Every minute counts. Contact now for a confidential evaluation of your case.",
-      button: "Call Now",
-      signal: "Signal 24h",
+      button: "Contact us via Signal",
+      whatsapp: "Contact us via WhatsApp",
     },
     faq: {
       label: "FAQ",
@@ -253,15 +253,15 @@ export const translations = {
       about: "À Propos",
       cases: "Affaires",
       contact: "Contact",
-      freeConsultation: "Appeler Urgent",
+      freeConsultation: "WhatsApp Urgent",
     },
     hero: {
       badge: "L'un des avocats pénalistes les plus réputés d'Espagne",
       title: "Accusé de Trafic de Drogue?",
       titleAccent: "Défense Pénale Urgente",
       subtitle: "Tomás, l'un des avocats pénalistes les plus prestigieux d'Espagne. Plus de 50 ans d'expérience en défense pénale. Spécialisation en trafic de drogue et tous types de délits pénaux.",
-      cta: "Appeler Maintenant - Urgent",
-      ctaSecondary: "Signal Direct",
+      cta: "Contactez-nous via Signal",
+      ctaSecondary: "Contactez-nous via WhatsApp",
     },
     stats: {
       cases: "Années d'Expérience",
@@ -326,8 +326,8 @@ export const translations = {
     cta: {
       title: "Votre Liberté Est Ma Priorité",
       subtitle: "Chaque minute compte. Contactez maintenant pour une évaluation confidentielle de votre affaire.",
-      button: "Appeler Maintenant",
-      signal: "Signal 24h",
+      button: "Contactez-nous via Signal",
+      whatsapp: "Contactez-nous via WhatsApp",
     },
     faq: {
       label: "FAQ",
@@ -362,15 +362,15 @@ export const translations = {
       about: "من نحن",
       cases: "القضايا",
       contact: "اتصل بنا",
-      freeConsultation: "اتصل عاجل",
+      freeConsultation: "واتساب عاجل",
     },
     hero: {
       badge: "أحد أكثر المحامين الجنائيين شهرة في إسبانيا",
       title: "متهم بتهريب المخدرات؟",
       titleAccent: "دفاع جنائي عاجل",
       subtitle: "توماس، أحد أكثر المحامين الجنائيين شهرة في إسبانيا. أكثر من 50 عامًا من الخبرة في الدفاع الجنائي. تخصص في تهريب المخدرات وجميع أنواع الجرائم الجنائية.",
-      cta: "اتصل الآن - عاجل",
-      ctaSecondary: "سيجنال مباشر",
+      cta: "تواصل معنا عبر Signal",
+      ctaSecondary: "تواصل معنا عبر WhatsApp",
     },
     stats: {
       cases: "سنوات الخبرة",
@@ -435,8 +435,8 @@ export const translations = {
     cta: {
       title: "حريتك هي أولويتي",
       subtitle: "كل دقيقة مهمة. اتصل الآن للحصول على تقييم سري لقضيتك.",
-      button: "اتصل الآن",
-      signal: "سيجنال 24 ساعة",
+      button: "تواصل معنا عبر Signal",
+      whatsapp: "تواصل معنا عبر WhatsApp",
     },
     faq: {
       label: "الأسئلة الشائعة",

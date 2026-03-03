@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { type Locale, getTranslations, isRTL } from "@/lib/i18n"
 
+const SIGNAL_URL = "https://signal.me/#p/+34641021551"
 const WHATSAPP_URL = "https://wa.me/34641021551?text=Hola%2C%20necesito%20consulta%20urgente"
 
 interface CtaSectionProps {
@@ -22,7 +23,7 @@ export function CtaSection({ locale }: CtaSectionProps) {
         </p>
         <div className={`flex flex-col sm:flex-row gap-3 justify-center mt-10 ${rtl ? "sm:flex-row-reverse" : ""}`}>
           <a 
-            href={WHATSAPP_URL}
+            href={SIGNAL_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-primary-foreground text-primary px-8 py-4 text-sm font-sans font-medium hover:opacity-90 transition-opacity"
@@ -35,7 +36,7 @@ export function CtaSection({ locale }: CtaSectionProps) {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 border border-primary-foreground/30 text-primary-foreground px-8 py-4 text-sm font-sans hover:bg-primary-foreground/10 transition-colors"
           >
-            <Image src="/signal.jpeg" alt="Signal" width={16} height={16} className="w-4 h-4" /> {t.cta.signal}
+            <Image src="/whatsapp.svg" alt="WhatsApp" width={16} height={16} className="w-4 h-4" /> {t.cta.whatsapp}
           </a>
         </div>
       </div>

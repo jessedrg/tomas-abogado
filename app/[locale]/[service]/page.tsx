@@ -9,6 +9,7 @@ import { VALID_SERVICES, CITIES, SERVICE_NAMES_I18N, SERVICE_SLUGS_I18N, getCano
 import { Shield, Clock, Scale, Users, ArrowRight, Award, Newspaper, ExternalLink } from "lucide-react"
 import Image from "next/image"
 
+const SIGNAL_URL = "https://signal.me/#p/+34641021551"
 const WHATSAPP_URL = "https://wa.me/34641021551?text=Hola%2C%20necesito%20consulta%20urgente"
 
 interface PageProps {
@@ -92,13 +93,22 @@ export default async function ServicePage({ params }: PageProps) {
               <div className="lg:col-span-5 lg:col-start-8">
                 <div className="flex flex-col gap-3">
                   <a
-                    href={WHATSAPP_URL}
+                    href={SIGNAL_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 text-sm font-sans font-medium hover:opacity-90 transition-opacity"
                   >
-                    <Image src="/signal.jpeg" alt="WhatsApp" width={16} height={16} className="w-4 h-4" />
+                    <Image src="/signal.jpeg" alt="Signal" width={16} height={16} className="w-4 h-4" />
                     {t.cta.button}
+                  </a>
+                  <a
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 border border-border text-foreground px-8 py-4 text-sm font-sans hover:border-primary/50 transition-colors"
+                  >
+                    <Image src="/whatsapp.svg" alt="WhatsApp" width={16} height={16} className="w-4 h-4" />
+                    {t.cta.whatsapp}
                   </a>
                 </div>
               </div>
