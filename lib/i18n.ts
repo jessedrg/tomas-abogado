@@ -31,7 +31,7 @@ export const translations = {
       titleAccent: "Defensa Penal Urgente",
       subtitle: "Tomás, uno de los abogados penalistas con más prestigio en España. Más de 50 años de experiencia en defensa penal. Especialización en narcotráfico y todo tipo de delitos penales.",
       cta: "Llamar Ahora - Urgente",
-      ctaSecondary: "Ver Servicios",
+      ctaSecondary: "Signal Directo",
     },
     stats: {
       cases: "Años de Trayectoria",
@@ -152,7 +152,7 @@ export const translations = {
       titleAccent: "Urgent Criminal Defense",
       subtitle: "Tomás, one of the most prestigious criminal defense attorneys in Spain. Over 50 years of experience in criminal defense. Specialization in drug trafficking and all types of criminal offenses.",
       cta: "Call Now - Urgent",
-      ctaSecondary: "View Services",
+      ctaSecondary: "Signal Direct",
     },
     stats: {
       cases: "Years of Experience",
@@ -261,7 +261,7 @@ export const translations = {
       titleAccent: "Défense Pénale Urgente",
       subtitle: "Tomás, l'un des avocats pénalistes les plus prestigieux d'Espagne. Plus de 50 ans d'expérience en défense pénale. Spécialisation en trafic de drogue et tous types de délits pénaux.",
       cta: "Appeler Maintenant - Urgent",
-      ctaSecondary: "Voir Services",
+      ctaSecondary: "Signal Direct",
     },
     stats: {
       cases: "Années d'Expérience",
@@ -370,7 +370,7 @@ export const translations = {
       titleAccent: "دفاع جنائي عاجل",
       subtitle: "توماس، أحد أكثر المحامين الجنائيين شهرة في إسبانيا. أكثر من 50 عامًا من الخبرة في الدفاع الجنائي. تخصص في تهريب المخدرات وجميع أنواع الجرائم الجنائية.",
       cta: "اتصل الآن - عاجل",
-      ctaSecondary: "عرض الخدمات",
+      ctaSecondary: "سيجنال مباشر",
     },
     stats: {
       cases: "سنوات الخبرة",

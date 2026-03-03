@@ -9,6 +9,7 @@ import { Phone, Shield, Clock, Scale, Users, Star, CheckCircle, ChevronDown, Arr
 import Image from "next/image"
 
 const PHONE_URL = "tel:+34641021551"
+const SIGNAL_URL = "https://signal.me/#p/+34641021551"
 
 interface PageProps {
   params: Promise<{ locale: string; service: string; city: string }>
@@ -129,10 +130,13 @@ export default async function ServiceCityPage({ params }: PageProps) {
                     {t.cityPage.freeQuote}
                   </a>
                   <a
-                    href="#como-funciona"
+                    href={SIGNAL_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 border border-border text-foreground px-8 py-4 text-sm font-sans hover:border-primary/50 transition-colors"
                   >
-                    {t.cityPage.howItWorks}
+                    <Image src="/signal.jpeg" alt="Signal" width={16} height={16} className="w-4 h-4" />
+                    {t.cta.signal}
                   </a>
                 </div>
 

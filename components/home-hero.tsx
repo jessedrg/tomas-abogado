@@ -1,7 +1,9 @@
-import { Phone, Scale, ArrowRight } from "lucide-react"
+import Image from "next/image"
+import { Phone, Scale } from "lucide-react"
 import { type Locale, getTranslations, isRTL } from "@/lib/i18n"
 
 const PHONE_URL = "tel:+34641021551"
+const SIGNAL_URL = "https://signal.me/#p/+34641021551"
 
 interface HomeHeroProps {
   locale: Locale
@@ -48,11 +50,13 @@ export function HomeHero({ locale }: HomeHeroProps) {
               {t.hero.cta}
             </a>
             <a
-              href="#servicios"
+              href={SIGNAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-secondary text-foreground border border-border px-8 py-4 text-sm font-sans hover:bg-muted transition-colors"
             >
+              <Image src="/signal.jpeg" alt="Signal" width={16} height={16} className="w-4 h-4" />
               {t.hero.ctaSecondary}
-              <ArrowRight className="w-4 h-4" />
             </a>
           </div>
         </div>

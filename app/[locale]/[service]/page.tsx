@@ -10,6 +10,7 @@ import { Phone, Shield, Clock, Scale, Users, ArrowRight, Award, Newspaper, Exter
 import Image from "next/image"
 
 const PHONE_URL = "tel:+34641021551"
+const SIGNAL_URL = "https://signal.me/#p/+34641021551"
 
 interface PageProps {
   params: Promise<{ locale: string; service: string }>
@@ -97,6 +98,15 @@ export default async function ServicePage({ params }: PageProps) {
                   >
                     <Phone className="w-4 h-4" />
                     {t.cityPage.freeQuote}
+                  </a>
+                  <a
+                    href={SIGNAL_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 border border-border text-foreground px-8 py-4 text-sm font-sans hover:border-primary/50 transition-colors"
+                  >
+                    <Image src="/signal.jpeg" alt="Signal" width={16} height={16} className="w-4 h-4" />
+                    {t.cta.signal}
                   </a>
                 </div>
               </div>
