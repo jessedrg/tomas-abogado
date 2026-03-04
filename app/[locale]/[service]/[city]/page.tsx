@@ -5,7 +5,8 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { locales, type Locale, getTranslations, isRTL } from "@/lib/i18n"
 import { VALID_SERVICES, CITIES, SERVICE_NAMES_I18N, SERVICE_SLUGS_I18N, getCanonicalService, getLocalizedSlug, type Service } from "@/lib/sitemap-data"
-import { Phone, Shield, Clock, Scale, Users, Star, CheckCircle, ChevronDown, ArrowRight, Award, Newspaper, ExternalLink } from "lucide-react"
+import { getServiceContent } from "@/lib/service-content"
+import { Phone, Shield, Clock, Scale, Users, Star, CheckCircle, ChevronDown, ArrowRight, Award, Newspaper, ExternalLink, Gavel, AlertTriangle, FileText } from "lucide-react"
 import Image from "next/image"
 
 const SIGNAL_URL = "https://signal.me/#p/+34641021551"
@@ -90,6 +91,9 @@ export default async function ServiceCityPage({ params }: PageProps) {
   const reviews = generateReviews(cityName, validLocale, seed)
   const faqs = generateFAQs(cityName, serviceName, validLocale)
   const avgRating = (reviews.reduce((acc, r) => acc + r.rating, 0) / reviews.length).toFixed(1)
+  
+  // Contenido legal específico por servicio
+  const serviceContent = getServiceContent(canonicalService)
 
   return (
     <>
@@ -173,6 +177,100 @@ export default async function ServiceCityPage({ params }: PageProps) {
             </div>
           </div>
         </section>
+
+        {/* Información Legal Específica */}
+        {serviceContent && (
+          <section className="border-b border-border" dir={rtl ? "rtl" : "ltr"}>
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
+              <div className="grid lg:grid-cols-12 gap-12">
+                <div className="lg:col-span-7">
+                  <p className="text-[10px] tracking-[0.4em] uppercase text-primary mb-3 font-sans">
+                    {validLocale === "ar" ? "المعلومات القانونية" : validLocale === "fr" ? "Information Juridique" : validLocale === "en" ? "Legal Information" : "Información Legal"}
+                  </p>
+                  <h2 className="font-serif text-2xl sm:text-3xl tracking-tight text-foreground mb-6">
+                    {validLocale === "ar" ? `ما يجب معرفته عن ${serviceName.singular}` : 
+                     validLocale === "fr" ? `Ce qu'il faut savoir sur ${serviceName.singular}` : 
+                     validLocale === "en" ? `What you need to know about ${serviceName.singular}` : 
+                     `Lo que debes saber sobre ${serviceName.singular}`}
+                  </h2>
+                  <p className="text-sm text-muted-foreground font-sans leading-relaxed mb-8">
+                    {serviceContent.introEs}
+                  </p>
+                  
+                  {/* Penas y Artículos */}
+                  <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                    <div className="bg-card border border-border p-4">
+                      <div className={`flex items-center gap-2 mb-2 ${rtl ? "flex-row-reverse" : ""}`}>
+                        <Gavel className="w-4 h-4 text-primary" />
+                        <span className="text-xs font-medium font-sans">
+                          {validLocale === "en" ? "Penalties" : validLocale === "fr" ? "Peines" : validLocale === "ar" ? "العقوبات" : "Penas"}
+                        </span>
+                      </div>
+                      <p className="text-sm font-sans text-foreground">{serviceContent.penas.min} - {serviceContent.penas.max}</p>
+                      {serviceContent.penas.agravada && (
+                        <p className="text-xs text-muted-foreground mt-1">
+                          {validLocale === "en" ? "Aggravated:" : validLocale === "fr" ? "Aggravée:" : validLocale === "ar" ? "مشددة:" : "Agravada:"} {serviceContent.penas.agravada}
+                        </p>
+                      )}
+                    </div>
+                    <div className="bg-card border border-border p-4">
+                      <div className={`flex items-center gap-2 mb-2 ${rtl ? "flex-row-reverse" : ""}`}>
+                        <FileText className="w-4 h-4 text-primary" />
+                        <span className="text-xs font-medium font-sans">
+                          {validLocale === "en" ? "Penal Code" : validLocale === "fr" ? "Code Pénal" : validLocale === "ar" ? "قانون العقوبات" : "Código Penal"}
+                        </span>
+                      </div>
+                      <p className="text-sm font-sans text-foreground">{serviceContent.codigoPenal.join(", ")}</p>
+                    </div>
+                  </div>
+                  
+                  {/* Cantidades si aplica */}
+                  {serviceContent.cantidades && (
+                    <div className="bg-primary/5 border border-primary/20 p-4 mb-8">
+                      <div className={`flex items-center gap-2 mb-3 ${rtl ? "flex-row-reverse" : ""}`}>
+                        <AlertTriangle className="w-4 h-4 text-primary" />
+                        <span className="text-xs font-medium font-sans text-primary">
+                          {validLocale === "en" ? "Important Quantities" : validLocale === "fr" ? "Quantités Importantes" : validLocale === "ar" ? "الكميات المهمة" : "Cantidades Importantes"}
+                        </span>
+                      </div>
+                      <div className="grid sm:grid-cols-2 gap-4 text-sm font-sans">
+                        <div>
+                          <p className="text-xs text-muted-foreground mb-1">
+                            {validLocale === "en" ? "Personal use" : validLocale === "fr" ? "Usage personnel" : validLocale === "ar" ? "الاستخدام الشخصي" : "Consumo propio"}
+                          </p>
+                          <p className="text-foreground font-medium">{serviceContent.cantidades.posesion}</p>
+                        </div>
+                        <div>
+                          <p className="text-xs text-muted-foreground mb-1">
+                            {validLocale === "en" ? "Trafficking threshold" : validLocale === "fr" ? "Seuil de trafic" : validLocale === "ar" ? "عتبة التهريب" : "Notoria importancia"}
+                          </p>
+                          <p className="text-foreground font-medium">{serviceContent.cantidades.trafico}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                
+                {/* Puntos Clave */}
+                <div className="lg:col-span-4 lg:col-start-9">
+                  <div className="bg-card border border-border p-6">
+                    <h3 className="text-sm font-medium font-sans mb-4">
+                      {validLocale === "en" ? "Key Points" : validLocale === "fr" ? "Points Clés" : validLocale === "ar" ? "النقاط الرئيسية" : "Puntos Clave"}
+                    </h3>
+                    <ul className="space-y-3">
+                      {serviceContent.keyPointsEs.map((point, i) => (
+                        <li key={i} className={`flex items-start gap-2 text-xs font-sans text-muted-foreground ${rtl ? "flex-row-reverse text-right" : ""}`}>
+                          <CheckCircle className="w-3.5 h-3.5 text-primary flex-shrink-0 mt-0.5" />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* About Tomás */}
         <section className="bg-secondary" dir={rtl ? "rtl" : "ltr"}>
@@ -317,14 +415,19 @@ export default async function ServiceCityPage({ params }: PageProps) {
           </div>
         </section>
 
-        {/* FAQ */}
+        {/* FAQ - Usa FAQs específicas del servicio si están disponibles */}
         <section className="max-w-3xl mx-auto px-6 lg:px-8 py-20 lg:py-32" dir={rtl ? "rtl" : "ltr"}>
           <p className="text-[10px] tracking-[0.4em] uppercase text-primary mb-3 font-sans">{t.faq.label}</p>
           <h2 className="font-serif text-2xl sm:text-4xl tracking-tight text-foreground mb-12">
-            {t.faq.title}
+            {serviceContent?.faqsEs ? 
+              (validLocale === "ar" ? `أسئلة شائعة عن ${serviceName.singular}` :
+               validLocale === "fr" ? `Questions fréquentes sur ${serviceName.singular}` :
+               validLocale === "en" ? `Frequently asked questions about ${serviceName.singular}` :
+               `Preguntas frecuentes sobre ${serviceName.singular}`) :
+              t.faq.title}
           </h2>
           <div className="border-t border-border">
-            {faqs.map((faq, i) => (
+            {(serviceContent?.faqsEs || faqs).map((faq, i) => (
               <details key={i} className="border-b border-border group">
                 <summary className={`w-full flex items-start justify-between gap-6 py-5 cursor-pointer list-none ${rtl ? "flex-row-reverse text-right" : ""}`}>
                   <h3 className="text-xs sm:text-sm font-sans font-medium text-foreground leading-relaxed group-hover:text-primary transition-colors">{faq.q}</h3>
