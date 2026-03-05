@@ -2,7 +2,7 @@ import Image from "next/image"
 import { Scale } from "lucide-react"
 import { type Locale, getTranslations, isRTL } from "@/lib/i18n"
 
-const SIGNAL_URL = "https://signal.me/#p/%2B34641021551"
+const SIGNAL_URL = "https://signal.me/#eu/CNvfMzKL4Ia3cMUwUgI2eYWIYKnB0zzXt3c7pU1dBeKRXu33-RhMjIH8pFLFTbKF"
 const WHATSAPP_URL = "https://wa.me/34641021551?text=Hola%2C%20necesito%20consulta%20urgente"
 
 interface HomeHeroProps {

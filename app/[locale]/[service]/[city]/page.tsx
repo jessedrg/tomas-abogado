@@ -9,7 +9,7 @@ import { getServiceContent } from "@/lib/service-content"
 import { Phone, Shield, Clock, Scale, Users, Star, CheckCircle, ChevronDown, ArrowRight, Award, Newspaper, ExternalLink, Gavel, AlertTriangle, FileText } from "lucide-react"
 import Image from "next/image"
 
-const SIGNAL_URL = "https://signal.me/#p/%2B34641021551"
+const SIGNAL_URL = "https://signal.me/#eu/CNvfMzKL4Ia3cMUwUgI2eYWIYKnB0zzXt3c7pU1dBeKRXu33-RhMjIH8pFLFTbKF"
 const WHATSAPP_URL = "https://wa.me/34641021551?text=Hola%2C%20necesito%20consulta%20urgente"
 
 interface PageProps {
