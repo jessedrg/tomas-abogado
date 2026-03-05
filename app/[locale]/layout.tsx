@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Inter, Playfair_Display } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
 import "../globals.css"
 import { locales, type Locale, isRTL } from "@/lib/i18n"
 
@@ -62,6 +63,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
     <html lang={validLocale} dir={rtl ? "rtl" : "ltr"} className={`${inter.variable} ${playfair.variable}`}>
       <body>
         {children}
+        <Analytics />
       </body>
     </html>
   )
